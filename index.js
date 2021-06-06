@@ -1,5 +1,5 @@
-const inquirer = require('inquirer');
-const fs = require('fs');
+const inquirer = require("inquirer");
+const fs = require("fs");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -156,14 +156,16 @@ const writeFile = () => {
     }
 
     addToFile += 
-    `<div class="col-md-4 emp">
-              <header class="main">
+    `<div class="card">
+    <img src="https://placehold.co/150x150" alt="Avatar">
+              <div class="container">
                 <h4>${empName}</h4>
                 <h6>${empRole}</h6>
-              </header>  
-              <div class="bio">
+              </div>
+              <hr class="solid">
+              <div class="details">
                 <ul>
-                  <li>id: ${empId}</li>
+                  <li>Id: ${empId}</li>
                   <li>Email: <a href="mailto:${empEmail}"> ${empEmail} </a></li>
                   <li>${extDet}</li>
                 </ul>
@@ -171,15 +173,14 @@ const writeFile = () => {
             </div>`;
   }
 
-  newFile = newFile = 
-  `<!DOCTYPE html>
+  newFile = newFile = `<!DOCTYPE html>
     <html lang="en">
         <head>
             <meta charset="UTF-8" />
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <title>Team Profile Generator</title>
-            <link rel="stylesheet" href="./assets/style.css" />
+            <link rel="stylesheet" href="./assets/css/style.css" />
             <link
                 href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
                 rel="stylesheet"
@@ -193,7 +194,7 @@ const writeFile = () => {
             </header>
             <main class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-3">
                         <section class="row employees">
                             ${addToFile}                         
                         </section>
@@ -207,6 +208,8 @@ const writeFile = () => {
   fs.writeFile("./dist/index.html", newFile, null, (err) => {
     err
       ? console.log("Oops, an error has occured: " + err)
-      : console.log("Your team was successfully created! Head over to dist/index.html to see your page");
+      : console.log(
+          "Your team was successfully created! Head over to dist/index.html to see your page"
+        );
   });
 };

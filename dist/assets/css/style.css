@@ -3,4 +3,44 @@ body{
 }
 h1{
     text-align: center;
+    color: white;
+    padding-top: 10px;
+}
+/* .EmpInfo{
+    color:black;
+} */
+.details{
+    color: black;
+}
+.card {
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
+    /* transition: 0.8s; */
+    width: 90%;
+}
+  
+/* .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+} */
+.box{
+    padding: 5px 10px;
+    text-align: center;
+}
+.container {
+    padding: 5px 16px;
+}
+img{
+    border-radius: 50%;
+    padding-top: 10px;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+hr.solid {
+    border-top: 4px solid #bbb;
+    border-radius: 5px;
+}
+hr{
+    margin: -10px;
 }
