@@ -156,7 +156,7 @@ const writeFile = () => {
     }
 
     addToFile += 
-    `<div class="col-md-4 person">
+    `<div class="col-md-4 emp">
               <header class="main">
                 <h4>${empName}</h4>
                 <h6>${empRole}</h6>
@@ -187,14 +187,14 @@ const writeFile = () => {
                 crossorigin="anonymous"
             />
         </head>
-        <body style="background-color: #203647;">
+        <body>
             <header id="head"> 
                 <h1>Engineering Team</h1>
             </header>
             <main class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <section class="row people">
+                        <section class="row employees">
                             ${addToFile}                         
                         </section>
                     </div>
