@@ -126,7 +126,7 @@ const generateEngineer = () => {
     .then((results) => {
       const { name, email, id, gitHub } = results;
       const newEngineer = new Engineer(name, id, email, gitHub, "Engineer");
-      newEngineer.gitHub(gitHub);
+      newEngineer.getgitHub(gitHub);
       newEngineer.getRole("Engineer");
       responses.push(newEngineer);
       generateIntorEng();
@@ -156,9 +156,9 @@ const writeFile = () => {
     }
 
     addToFile += 
-    `<div class="card">
+    `<div class="card col-md-3">
     <img src="https://placehold.co/150x150" alt="Avatar">
-              <div class="container">
+              <div class="box">
                 <h4>${empName}</h4>
                 <h6>${empRole}</h6>
               </div>
@@ -194,7 +194,7 @@ const writeFile = () => {
             </header>
             <main class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-12">
                         <section class="row employees">
                             ${addToFile}                         
                         </section>
